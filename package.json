@@ -1,0 +1,27 @@
+{
+  "name": "esm-test",
+  "version": "1.0.0",
+  "description": "Basic Express app with PostgreSQL",
+  "type": "module",
+  "main": "app.mjs",
+  "scripts": {
+    "start": "node app.mjs",
+    "dev": "nodemon app.mjs"
+  },
+  "dependencies": {
+    "@hypertestco/node-sdk-v3": "0.0.1-8",
+    "express": "^4.18.2",
+    "nyc": "17.1.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "esm"
+  ],
+  "author": "",
+  "license": "ISC"
+}
