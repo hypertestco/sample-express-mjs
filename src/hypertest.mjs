@@ -8,4 +8,6 @@ if (process.env.HT_MODE === 'RECORD') {
     serviceName: 'sample-mjs-express-pg',
     exporterUrl: process.env.HT_EXPORTER_URL
   });
+
+  setTimeout(() => htSdk.markAppAsReady(), 2000);
 }

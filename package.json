@@ -5,13 +5,14 @@
   "type": "module",
   "main": "app.mjs",
   "scripts": {
-    "start": "node src/app.mjs",
+    "start-pg": "docker compose up -d",
+    "start": "npm run start-pg && node src/app.mjs",
     "ht-instrument": "nyc instrument src instrumented_src",
     "ht-run-instrumented-app": "HT_MODE=RECORD nyc node --loader=@hypertestco/node-sdk-v3/hooks.mjs instrumented_src/app.mjs",
-    "ht-start": "npm run ht-instrument && npm run ht-run-instrumented-app"
+    "ht-start": "npm run start-pg && npm run ht-instrument && npm run ht-run-instrumented-app"
   },
   "dependencies": {
-    "@hypertestco/node-sdk-v3": "0.0.1-8",
+    "@hypertestco/node-sdk-v3": "0.0.1-15",
     "dotenv": "^17.2.3",
     "express": "^4.18.2",
     "nyc": "17.1.0",
