@@ -1,3 +1,5 @@
+import 'dotenv/config';
+import './hypertest.mjs';
 import express from 'express';
 import pkg from 'pg';
 const { Pool } = pkg;

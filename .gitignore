@@ -1,1 +1,4 @@
 node_modules
+instrumented_src
+.env
+.nyc_output
