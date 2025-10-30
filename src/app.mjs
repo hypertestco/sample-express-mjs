@@ -22,8 +22,7 @@ app.use(express.json());
 // Hello World router with PostgreSQL query
 app.get('/', async (req, res) => {
   try {
-    // Execute the PostgreSQL query: select 1 + 1 as result
-    const result = await pool.query('SELECT 1 + 1 AS result');
+    const result = await pool.query('SELECT 1 + 1 AS res');
     
     res.json({
       message: 'Hello World!',
